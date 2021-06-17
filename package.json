@@ -155,9 +155,13 @@
     "typecheck": "node ./scripts/check-ts",
     "update-dictionary": "node ./scripts/update-dictionary.js",
     "version": "prettier --write \"**/CHANGELOG.md\"",
-    "watch": "lerna run watch --no-sort --stream --concurrency 999"
+    "watch": "lerna run watch --no-sort --stream --concurrency 999",
+    "postinstall": "patch-package"
   },
   "workspaces": [
     "packages/*"
-  ]
+  ],
+  "dependencies": {
+    "patch-package": "^6.4.7"
+  }
 }

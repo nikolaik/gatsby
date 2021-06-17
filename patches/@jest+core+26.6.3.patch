@@ -1,0 +1,14 @@
+diff --git a/node_modules/@jest/core/build/collectHandles.js b/node_modules/@jest/core/build/collectHandles.js
+index be56117..f9cedd3 100644
+--- a/node_modules/@jest/core/build/collectHandles.js
++++ b/node_modules/@jest/core/build/collectHandles.js
+@@ -134,7 +134,8 @@ function collectHandles() {
+       if (
+         type === 'PROMISE' ||
+         type === 'TIMERWRAP' ||
+-        type === 'ELDHISTOGRAM'
++        type === 'ELDHISTOGRAM' ||
++        type === `DNSCHANNEL`
+       ) {
+         return;
+       }
